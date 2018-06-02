@@ -1,0 +1,8 @@
+name: SizePlayer
+version: 1.0
+main: SizePLayer\SizePLayer
+api: 3.0.0-ALPHA12
+
+permission:
+  size.permission: 
+    default: op
