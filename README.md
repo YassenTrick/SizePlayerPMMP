@@ -5,5 +5,5 @@ Fix by FreeGamingHere
 + /size (number)
 + /size help
 + /size reset
-#warning
+# warning
 + the higher the number the more lag you will have.
