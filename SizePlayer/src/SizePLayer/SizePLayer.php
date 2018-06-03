@@ -1,14 +1,11 @@
 <?php
-
 namespace SizePLayer;
-
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\entity\Entity;
 use pocketmine\Server;
 use pocketmine\Player;
-
 class SizePlayer extends PluginBase{
     
     public $size = array();
@@ -22,11 +19,10 @@ class SizePlayer extends PluginBase{
         $player = $event->getPlayer();
         if(!empty($this->size[$player->getName()])){
             $size = $this->size[$player->getName()];
-            $player->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, $size);
+            $player->setScale($size);
         }
     }
 }
-
 class Size extends Command{
     
     private $plugin;
@@ -40,12 +36,12 @@ class Size extends Command{
             if(isset($args[0])){
                 if(is_numeric($args[0])){
                     $this->plugin->size[$player->getName()] = $args[0];
-                    $player->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, $args[0]);
+                    $player->setScale($args[0]);
                     $player->sendMessage("§1- §aYour size now is ".$args[0]."!");
                 }elseif($args[0] == "reset"){
                     if(!empty($this->plugin->size[$player->getName()])){
                         unset($this->plugin->size[$player->getName()]);
-                        $player->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, 1);
+                        $player->setScale(1);
                         $player->sendMessage("§1- §aYour size is now normal!");
                     }else{
                         $player->sendMessage("§1- §aYour size has been reset!!");
