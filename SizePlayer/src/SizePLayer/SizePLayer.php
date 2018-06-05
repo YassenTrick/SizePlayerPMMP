@@ -23,7 +23,7 @@ class SizePLayer extends PluginBase{
         }
     }
 }
-class size extends Command{
+class SizePLayer extends Command{
     
     private $plugin;
     public function __construct($plugin){
