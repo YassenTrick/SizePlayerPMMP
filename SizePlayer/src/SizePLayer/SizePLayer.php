@@ -23,7 +23,8 @@ class SizePLayer extends PluginBase{
         }
     }
     
-    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool{
+    public function onCommand(CommandSender $user, Command $cmd, string $label, array $args): bool{
+        $sender = $this->getServer()->getOfflinePlayer($user);
         if($sender->hasPermission("size.command")){
             if(isset($args[0])){
                 if(is_numeric($args[0])){
