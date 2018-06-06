@@ -6,7 +6,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\entity\Entity;
 use pocketmine\Server;
 use pocketmine\Player;
-use SizePLayer\command;
+use SizePLayer\SizePLayerCommand;
 class SizePLayer extends PluginBase{
     
     public $size = array();
