@@ -2,6 +2,11 @@
 
 namespace SizePLayer;
 
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
+use pocketmine\entity\Entity;
+use pocketmine\Server;
+use pocketmine\Player;
   
 class SizePLayerCommand extends Command{
     
