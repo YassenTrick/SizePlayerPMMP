@@ -23,23 +23,23 @@ class SizePLayer extends PluginBase{
         }
     }
     
-    public function onCommand(CommandSender $player, string $label, array $args){
-        if($player->hasPermission("size.command")){
+    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool{
+        if($sender->hasPermission("size.command")){
             if(isset($args[0])){
                 if(is_numeric($args[0])){
-                    $this->size[$player->getName()] = $args[0];
-                    $player->setScale($args[0]);
-                    $player->sendMessage("§1- §aYour size now is ".$args[0]."!");
+                    $this->size[$sender->getName()] = $args[0];
+                    $sender->setScale($args[0]);
+                    $sender->sendMessage("§1- §aYour size now is ".$args[0]."!");
                 }elseif($args[0] == "reset"){
-                    if(!empty($this->size[$player->getName()])){
-                        unset($this->size[$player->getName()]);
-                        $player->setScale(1);
-                        $player->sendMessage("§1- §aYour size is now normal!");
+                    if(!empty($this->size[$sender->getName()])){
+                        unset($this->size[$sender->getName()]);
+                        $sender->setScale(1);
+                        $sender->sendMessage("§1- §aYour size is now normal!");
                     }else{
-                        $player->sendMessage("§1- §aYour size has been reset!!");
+                        $sender->sendMessage("§1- §aYour size has been reset!!");
                     }
                 }else{
-                    $player->sendMessage("§8» §eCommands Lists! Sizeplayer \n§8» §c/size help §7- if you don`t know the commands!\n§8» §c/size reset §7- This command reset your sizes!\n§8» §c/size (size:number) §7- This command makes you any size!");
+                    $sender->sendMessage("§8» §eCommands Lists! Sizeplayer \n§8» §c/size help §7- if you don`t know the commands!\n§8» §c/size reset §7- This command reset your sizes!\n§8» §c/size (size:number) §7- This command makes you any size!");
                 }
             }
         }
