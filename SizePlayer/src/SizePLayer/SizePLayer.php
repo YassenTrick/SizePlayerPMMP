@@ -12,7 +12,7 @@ class SizePLayer extends PluginBase{
     public function onEnable(){
         $this->getLogger()->info("§aEnabling plugin...");
         $this->getLogger()->notice("§bSizePlayer v1 succesfully enabled!!");
-        $this->getServer()->getCommandMap()->register("size", new Size($this));
+        $this->getServer()->getCommandMap()->register("size", new SizePLayerCommand($this));
     }
     
     public function respawn(PlayerRespawnEvent $event){
@@ -23,7 +23,7 @@ class SizePLayer extends PluginBase{
         }
     }
 }
-class SizePLayer extends Command{
+class SizePLayerCommand extends Command{
     
     private $plugin;
     public function __construct($plugin){
