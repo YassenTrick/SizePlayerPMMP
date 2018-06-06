@@ -44,5 +44,6 @@ class SizePLayer extends PluginBase{
                 }
             }
         }
+        return true;
     }
 }
