@@ -10,8 +10,8 @@ class SizePLayer extends PluginBase{
     
     public $size = array();
     public function onEnable(){
-        $this->getLogger()->info("§aEnabling plugin...");
-        $this->getLogger()->notice("§bSizePlayer v1 succesfully enabled!!");
+        $this->getLogger()->info("Enabling plugin...");
+        $this->getLogger()->notice("SizePlayer v1 succesfully enabled!!");
         #$this->getServer()->getCommandMap()->register("size", new Size($this));
     }
     
@@ -24,7 +24,7 @@ class SizePLayer extends PluginBase{
     }
     
     public function onCommand(CommandSender $user, Command $cmd, string $label, array $args): bool{
-        $sender = $this->getServer()->getOfflinePlayer($user);
+        $sender = $this->getServer()->getOfflinePlayer($user->getName());
         if($sender->hasPermission("size.command")){
             if(isset($args[0])){
                 if(is_numeric($args[0])){
