@@ -5,5 +5,5 @@ Fix pmmp changed size to setScale()
 + /size (number)
 + /size help
 + /size reset
-# WARNING
-+ the higher the number the more lag you will have.
+# Whats New
++ Added player size limit.
