@@ -11,7 +11,7 @@ class SizePLayer extends PluginBase{
     
     public $size = array();
     public function onEnable(){
-        $this->getLogger()->notice("SizePlayer v1 succesfully enabled!!");
+        $this->getLogger()->info("SizePlayer v1 succesfully enabled!!");
         $this->getServer()->getCommandMap()->register("size", new SizePLayerCommand($this));
     }
     
