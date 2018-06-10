@@ -8,6 +8,6 @@ Fix pmmp changed size to setScale()
 # Whats New
 + Added player size limit.
 
-
-[![](https://poggit.pmmp.io/shield.state/SizePlayer)](https://poggit.pmmp.io/p/SizePlayer)
-<a href="https://poggit.pmmp.io/p/SizePlayer"><img src="https://poggit.pmmp.io/shield.state/SizePlayer"></a>
+# Download
+[![](https://poggit.pmmp.io/shield.api/SizePlayer)](https://poggit.pmmp.io/p/SizePlayer)
+<a href="https://poggit.pmmp.io/p/SizePlayer"><img src="https://poggit.pmmp.io/shield.api/SizePlayer"></a>
