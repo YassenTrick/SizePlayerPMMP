@@ -23,6 +23,9 @@ class SizePLayerCommand extends Command{
                     if($args[0] > 20){
                       $player->sendMessage("Size cannot be bigger then 20");
                       return true;
+                    }elseif($args[0] <= 0){
+                      $player->sendMessage("Size cannot be smaller than or eqaul to 0");
+                      return true;
                     }
                     $this->plugin->size[$player->getName()] = $args[0];
                     $player->setScale($args[0]);
