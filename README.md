@@ -8,6 +8,7 @@ A PocketMine-MP plugin that allows players to change their size.
   
 # [ What's New ]
 + [x] Decreased a maximum sizes from 20 to 15.
++ [x] Added a icon.
 
 # [ Download ]
 [![](https://poggit.pmmp.io/shield.api/SizePlayer)](https://poggit.pmmp.io/p/SizePlayer)
