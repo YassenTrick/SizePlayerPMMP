@@ -27,7 +27,7 @@ class SizePLayerCommand extends Command {
             if(isset($args[0])) {
                 if(is_numeric($args[0])) {
                     if($args[0] > 15) {
-                      $player->sendMessage(TF::RED. "This size must bigger than §e15");
+                      $player->sendMessage(TF::RED. "This size must not bigger than §e15");
                       return true;
                     }elseif($args[0] <= 0) {
                       $player->sendMessage(TF::RED. "This size cannot be smaller than or equal to §e0");
