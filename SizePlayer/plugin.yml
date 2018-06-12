@@ -6,3 +6,5 @@ api: [3.0.0-ALPHA12, 3.0.0-ALPHA13, 3.0.0-ALPHA14, 3.0.0-ALPHA15]
 permission:
   size.permission: 
     default: op
+  size.command:
+    default: op
