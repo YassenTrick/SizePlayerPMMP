@@ -34,7 +34,7 @@ class SizePLayerCommand extends Command {
                       return true;
                     }
                     $this->plugin->size[$player->getName()] = $args[0];
-                    $player->setScale($args[0]);
+                    $player->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, $args[0]);
                     $player->sendMessage("§8§l(§a!§8)§r §aYou have changed your size to ".TF::GOLD . $args[0]."§a!");
                 }elseif($args[0] == "reset") {
                     if(!empty($this->plugin->size[$player->getName()])) {
