@@ -22,13 +22,12 @@ class SizePLayer extends PluginBase {
     public $size = array();
     
     public function onEnable(): void{
-        $this->getLogger()->info(TF::GREEN. "SizePlayer plugin is successfully enabled!");
+        $this->getLogger()->info("SizePlayer plugin is successfully enabled!");
         $this->getServer()->getCommandMap()->register("size", new SizePLayerCommand($this));
     }
     
     public function onDisable(): void{
-        $this->getLogger()->info(TF::GOLD . "SizePlayer plugin is currently disabled!");
-		$this->getServer()->shutdown();
+        $this->getLogger()->info("SizePlayer plugin is currently disabled!");
     }
     
     public function onPlayerRespawn(PlayerRespawnEvent $ev): void{
