@@ -17,10 +17,6 @@ class SizePLayerCommand extends Command{
     }
     
     public function execute(CommandSender $player, string $label, array $args){
-        if(!$player instanceof Player){
-			$player->sendMessage(C::RED."This command only works in-game");
-			return;
-		}
         if($player->hasPermission("size.command")){
             if(isset($args[0])){
                 if(is_numeric($args[0])){
