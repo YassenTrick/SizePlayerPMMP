@@ -3,6 +3,6 @@ branches:
 - master
 projects:
   SizePlayer:
-    path: SizePlayer/
+    path: ""
     icon: "icon.png"
 ...

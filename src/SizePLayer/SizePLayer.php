@@ -1,8 +1,6 @@
 <?php
-
 declare(strict_types=1);
 namespace SizePLayer;
-
 use pocketmine\plugin\{
     PluginBase, Plugin
 };
@@ -15,7 +13,6 @@ use pocketmine\{
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\entity\Entity;
 use SizePLayer\SizePLayerCommand;
-
 class SizePLayer extends PluginBase {
     
     /** var $size */
