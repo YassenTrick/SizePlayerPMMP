@@ -32,7 +32,7 @@ class SizePLayer extends PluginBase {
         // SIZE EVENT \\
         if(!empty($this->size[$player->getName()])){
             $size = $this->size[$player->getName()];
-            $player->setScale($size);
+            $player->setScale(intval($size));
          }
      }
 }
