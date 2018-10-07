@@ -4,7 +4,5 @@ main: SizePLayer\SizePLayer
 api: [3.0.0]
 
 permission:
-  size.permission: 
-    default: op
   size.command:
     default: op
