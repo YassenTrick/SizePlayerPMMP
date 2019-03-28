@@ -1,5 +1,5 @@
 name: SizePlayer
-version: 1.0.3
+version: 1.1.0
 main: SizePLayer\SizePLayer
 api: [3.0.0]
 
