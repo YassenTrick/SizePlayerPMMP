@@ -35,12 +35,11 @@ class SizePLayerCommand extends Command {
                       $player->sendMessage(TF::RED. "This size cannot be smaller than or equal to §e0");
                       return true;
                     }
-                    $this->plugin->size[$player->getName()] = $args[0];
-                    $player->setScale((float)$args[0]);
+					$this->plugin->updateSize($player, (float)$args[0]);
                     $player->sendMessage("§8§l(§a!§8)§r §aYou have changed your size to ".TF::GOLD . $args[0]."§a!");
                 }elseif($args[0] == "reset") {
-                    if(!empty($this->plugin->size[$player->getName()])) {
-                        unset($this->plugin->size[$player->getName()]);
+                    if(!empty($this->plugin->data["sizes"][$player->getLowerCaseName()])) {
+                        unset($this->plugin->data["sizes"][$player->getLowerCaseName()]);
                         $player->setScale(1);
                         $player->sendMessage("§8§l(§a!§8)§r §aYou size has back to normal!");
                     }else{
