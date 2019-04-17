@@ -1,22 +1,16 @@
 <?php
 declare(strict_types=1);
 namespace SizePLayer;
-use pocketmine\plugin\{
-    PluginBase, Plugin
-};
-use pocketmine\command\{
-    Command, CommandSender
-};
-use pocketmine\{
-    Server, Player
-};
-use pocketmine\utils\TextFormat as TF;
-use pocketmine\entity\Entity;
-use pocketmine\event\player\{PlayerJoinEvent,PlayerQuitEvent, PlayerRespawnEvent};;
 
-use SizePLayer\SizePLayerCommand;
+use pocketmine\event\Listener;
+use pocketmine\plugin\PluginBase;
 
-class SizePLayer extends PluginBase {
+use pocketmine\utils\Config;
+
+use pocketmine\Player;
+use pocketmine\event\player\{PlayerJoinEvent, PlayerRespawnEvent};;
+
+class SizePLayer extends PluginBase implements Listener {
     
     public function onEnable(): void{
         //no start message in compliance with poggit rules.
