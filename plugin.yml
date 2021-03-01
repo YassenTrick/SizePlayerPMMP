@@ -1,8 +1,8 @@
 name: SizePlayer
-version: 1.1.0
-main: SizePLayer\SizePLayer
+version: 2.0.0
+main: SizePlayer\SizePlayer
 api: [3.0.0]
 
 permission:
-  size.command:
+  sizeplayer.command:
     default: op
