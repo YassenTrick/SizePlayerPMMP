@@ -1,3 +1,9 @@
+# PLUGIN HAS BEEN ARCHIVED/DEPRECATED.
+#### Seek alternatives.
+
+
+
+
 # SizePlayerPMMP
 A PocketMine-MP plugin that allows players to change their size.
 
